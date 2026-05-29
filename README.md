@@ -105,6 +105,17 @@ make fmt       # auto-format source files
 make clean     # wipe target/ directory
 ```
 
+## Linting
+
+We use [Clippy](https://github.com/rust-lang/rust-clippy) to catch common mistakes and improve code quality.
+
+```bash
+# Run clippy lints on all contracts
+cd contracts/market && cargo clippy --all-targets --all-features -- -D warnings
+```
+
+The `-D warnings` flag treats all warnings as errors, ensuring code quality standards are met before merging.
+
 ## Security
 
 Smart contract security is critical. All contracts will undergo:
